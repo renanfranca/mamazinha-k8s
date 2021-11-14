@@ -69,6 +69,8 @@ spec:
             # Registry configuration
             - name: SPRING_PROFILES_ACTIVE
               value: prod,k8s
+            - name: ENCRYPT_KEY
+              value: 8b26532a-250b-4a8b-a999-d66f878d8452              
             - name: SPRING_SECURITY_USER_PASSWORD
               valueFrom:
                 secretKeyRef:
@@ -80,6 +82,14 @@ spec:
               value: native
             - name: SPRING_CLOUD_CONFIG_SERVER_COMPOSITE_0_SEARCH_LOCATIONS
               value: file:./central-config
+            - name: SPRING_CLOUD_CONFIG_SERVER_COMPOSITE_1_TYPE
+              value: git
+            - name: SPRING_CLOUD_CONFIG_SERVER_COMPOSITE_1_URI
+              value: https://github.com/renanfranca/mamazinha-jhipster-registry-config
+            - name: SPRING_CLOUD_CONFIG_SERVER_COMPOSITE_1_SEARCH_PATHS
+              value: config
+            - name: SPRING_CLOUD_CONFIG_SERVER_COMPOSITE_1_LABEL
+              value: main
             - name: EUREKA_INSTANCE_LEASE_RENEWAL_INTERVAL_IN_SECONDS
               value: "15"
             - name: EUREKA_INSTANCE_LEASE_EXPIRATION_DURATION_IN_SECONDS
