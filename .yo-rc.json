@@ -1,0 +1,17 @@
+{
+  "generator-jhipster": {
+    "appsFolders": ["baby", "gateway"],
+    "directoryPath": "../",
+    "clusteredDbApps": {},
+    "serviceDiscoveryType": "eureka",
+    "jwtSecretKey": "ZjcyNDkzMTFkMzVmYTY3YWUyOGUzMGNmNDBkNjI3MTMyOTY0OTVjODFlOTU4MDIxYjQzZmVjZWRmYmUyYjQ4N2UyZGRjZTNiMjYxYTc4NWZhZDkyNzhkYmYyNDljOTVjOWExZg==",
+    "dockerRepositoryName": "stting",
+    "dockerPushCommand": "docker push",
+    "kubernetesNamespace": "mamazinha",
+    "kubernetesServiceType": "LoadBalancer",
+    "kubernetesUseDynamicStorage": false,
+    "ingressDomain": "",
+    "monitoring": "no",
+    "istio": false
+  }
+}

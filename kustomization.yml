@@ -1,0 +1,19 @@
+commonLabels:
+  app.kubernetes.io/genereted-by: JHipster
+
+namespace: mamazinha
+
+resources:
+  - namespace.yml
+  # Individual apps
+  - baby-k8s/baby-deployment.yml
+  - baby-k8s/baby-service.yml
+  - baby-k8s/baby-postgresql.yml
+  - gateway-k8s/gateway-deployment.yml
+  - gateway-k8s/gateway-service.yml
+  - gateway-k8s/gateway-postgresql.yml
+  # service discovery eureka/consul
+  - registry-k8s/jhipster-registry.yml
+  - registry-k8s/application-configmap.yml
+
+patchesJson6902:
