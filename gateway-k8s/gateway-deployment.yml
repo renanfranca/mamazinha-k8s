@@ -27,6 +27,14 @@ spec:
                         - gateway
                 topologyKey: kubernetes.io/hostname
               weight: 100
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: app
+                operator: In
+                values:
+                - gateway
       initContainers:
         - name: init-ds
           image: busybox:latest
@@ -81,7 +89,7 @@ spec:
           resources:
             requests:
               memory: "512Mi"
-              cpu: "500m"
+              cpu: "400m"
             limits:
               memory: "1Gi"
               cpu: "1"
