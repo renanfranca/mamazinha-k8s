@@ -1,4 +1,16 @@
 apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: baby-postgresql-pvc
+  namespace: mamazinha
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 2Gi
+---
+apiVersion: v1
 kind: Secret
 metadata:
   name: baby-postgresql
@@ -26,7 +38,8 @@ spec:
     spec:
       volumes:
         - name: data
-          emptyDir: {}
+          persistentVolumeClaim:
+            claimName: baby-postgresql-pvc
       containers:
         - name: postgres
           image: postgres:13.4

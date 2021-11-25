@@ -9,9 +9,10 @@
     "dockerPushCommand": "docker push",
     "kubernetesNamespace": "mamazinha",
     "kubernetesServiceType": "LoadBalancer",
-    "kubernetesUseDynamicStorage": false,
+    "kubernetesUseDynamicStorage": true,
     "ingressDomain": "",
     "monitoring": "no",
-    "istio": false
+    "istio": false,
+    "kubernetesStorageClassName": ""
   }
 }
